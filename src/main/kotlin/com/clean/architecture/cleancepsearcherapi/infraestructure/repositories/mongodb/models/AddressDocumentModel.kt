@@ -1,5 +1,6 @@
 package com.clean.architecture.cleancepsearcherapi.infraestructure.repositories.sql.models
 
+import com.clean.architecture.cleancepsearcherapi.infraestructure.repositories.Model
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 
@@ -11,4 +12,4 @@ data class AddressDocumentModel(
     val district: String,
     val city: String,
     val state: String
-)
+): Model

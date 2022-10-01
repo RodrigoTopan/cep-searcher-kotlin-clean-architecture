@@ -1,4 +1,4 @@
-package com.clean.architecture.cleancepsearcherapi.adapters.gateways.repositories
+package com.clean.architecture.cleancepsearcherapi.infraestructure.repositories.sql
 
 import com.clean.architecture.cleancepsearcherapi.infraestructure.repositories.sql.models.AddressTableModel
 import org.springframework.data.jpa.repository.JpaRepository

@@ -1,5 +1,6 @@
 package com.clean.architecture.cleancepsearcherapi.infraestructure.repositories.sql.models
 
+import com.clean.architecture.cleancepsearcherapi.infraestructure.repositories.Model
 import javax.persistence.*
 
 @Entity
@@ -14,4 +15,4 @@ data class AddressTableModel(
     val district: String,
     val city: String,
     val state: String
-)
+): Model

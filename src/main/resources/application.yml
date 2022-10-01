@@ -1,6 +1,6 @@
 viacep:
   api:
-    host: https://viacep.com.br/ws/
+    url: https://viacep.com.br/ws/
     responseFormat: /json
 
 spring:
