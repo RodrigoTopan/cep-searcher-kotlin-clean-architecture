@@ -1,0 +1,10 @@
+viacep:
+  api:
+    host: https://viacep.com.br/ws/
+    responseFormat: /json
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/test
+      auto-index-creation: true

@@ -17,8 +17,8 @@ class SearchAddressUseCaseImpl(private val addressRepository: AddressRepository)
     }
 
     fun mapToDTO(addressEntity: AddressEntity): AddressResponseDTO {
-        val (code, cep, street, district, city, state) = addressEntity;
-        return AddressResponseDTO(code, cep, street, district, city, state);
+        val (id, cep, street, district, city, state) = addressEntity;
+        return AddressResponseDTO(id, cep, street, district, city, state);
     }
 
     override fun searchByCEP(cep: String): AddressResponseDTO? {

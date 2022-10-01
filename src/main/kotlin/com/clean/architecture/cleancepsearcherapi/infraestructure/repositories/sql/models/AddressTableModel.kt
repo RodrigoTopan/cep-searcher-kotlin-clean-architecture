@@ -4,11 +4,11 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "address")
-data class AddressModel(
+data class AddressTableModel(
     @Id
     @Column(name = "id", unique = true, nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Int? = null,
+    var id: Long? = null,
     val cep: String,
     val street: String,
     val district: String,
