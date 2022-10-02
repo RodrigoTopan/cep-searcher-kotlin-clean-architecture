@@ -1,6 +1,6 @@
-package com.clean.architecture.cleancepsearcherapi.core.address.dto;
+package com.clean.architecture.cleancepsearcherapi.infraestructure.adapters.input.rest.dto;
 
-data class AddressResponseDTO(
+data class SearchAddressResponseDTO(
     val id: String?,
     val cep: String,
     val street: String,

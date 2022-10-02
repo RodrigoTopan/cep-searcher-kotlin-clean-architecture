@@ -1,7 +1,7 @@
 package com.clean.architecture.cleancepsearcherapi.core.address.usecases
 
-import com.clean.architecture.cleancepsearcherapi.core.address.dto.CreationAddressRequestDTO
+import com.clean.architecture.cleancepsearcherapi.domain.entities.AddressEntity
 
 interface CreationAddressUseCase {
-    fun run(creationAddressRequestDTO: CreationAddressRequestDTO)
+    fun run(addressEntity: AddressEntity)
 }
