@@ -1,6 +1,6 @@
 package com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.sql.repositories.address
 
-import com.clean.architecture.cleancepsearcherapi.adapters.gateways.repositories.AddressRepository
+import com.clean.architecture.cleancepsearcherapi.core.ports.AddressRepository
 import com.clean.architecture.cleancepsearcherapi.domain.entities.AddressEntity
 import com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.Mapper
 import com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.sql.models.AddressTableModel
@@ -27,8 +27,8 @@ internal class SqlAddressRepositoryImpl(
         return addressMapper.toEntity(addressModel);
     }
 
-    override fun findById(id: String): AddressEntity? {
-        val addressModel = sqlAddressBaseRepository.findById(id.toLong()).get();
+    override fun findByUUID(uuid: String): AddressEntity? {
+        val addressModel = sqlAddressBaseRepository.findByUuid(uuid).get();
         if (isNull(addressModel)) return null;
         return addressMapper.toEntity(addressModel);
     }

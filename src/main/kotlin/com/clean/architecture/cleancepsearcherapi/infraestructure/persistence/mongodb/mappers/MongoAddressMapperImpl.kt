@@ -8,12 +8,12 @@ import org.springframework.stereotype.Component
 @Component
 class MongoAddressMapperImpl : Mapper<AddressEntity, AddressDocumentModel> {
     override fun toEntity(model: AddressDocumentModel): AddressEntity {
-        val (id, cep, street, district, city, state) = model;
-        return AddressEntity(id, cep, street, district, city, state);
+        val (_, uuid, cep, street, district, city, state) = model;
+        return AddressEntity(uuid, cep, street, district, city, state);
     }
 
     override fun toModel(entity: AddressEntity): AddressDocumentModel {
-        val (_, cep, street, district, city, state) = entity;
-        return AddressDocumentModel(null, cep, street, district, city, state);
+        val (uuid, cep, street, district, city, state) = entity;
+        return AddressDocumentModel(null, uuid, cep, street, district, city, state);
     }
 }

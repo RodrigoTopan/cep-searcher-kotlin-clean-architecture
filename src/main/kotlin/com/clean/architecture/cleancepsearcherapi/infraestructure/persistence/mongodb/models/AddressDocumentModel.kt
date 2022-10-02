@@ -7,6 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document
 @Document
 data class AddressDocumentModel(
     @Id var id: String? = null,
+    val uuid: String,
     val cep: String,
     val street: String,
     val district: String,

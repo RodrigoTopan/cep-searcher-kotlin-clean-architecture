@@ -6,4 +6,5 @@ import java.util.*
 
 interface SqlAddressBaseRepository : JpaRepository<AddressTableModel, Long> {
     fun findByCep(cepRegex: String): Optional<AddressTableModel>
+    fun findByUuid(uuid: String): Optional<AddressTableModel>
 }

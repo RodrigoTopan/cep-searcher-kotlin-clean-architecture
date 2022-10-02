@@ -5,13 +5,14 @@ import com.clean.architecture.cleancepsearcherapi.infraestructure.adapters.gatew
 import com.clean.architecture.cleancepsearcherapi.core.ports.SearchAddressGateway
 import com.clean.architecture.cleancepsearcherapi.domain.entities.AddressEntity
 import org.springframework.stereotype.Service
+import java.util.UUID
 
 @Service
 class SearchAddressGatewayImpl(private val viaCepClient: ViaCepClient) : SearchAddressGateway {
     override fun findByCep(cepRegex: String): AddressEntity? {
         val viaCepAddress: ViaCepAddressResponseDTO = viaCepClient.searchAddress(cepRegex);
         return AddressEntity(
-            null,
+            UUID.randomUUID().toString(),
             viaCepAddress.cep,
             viaCepAddress.logradouro,
             viaCepAddress.bairro,

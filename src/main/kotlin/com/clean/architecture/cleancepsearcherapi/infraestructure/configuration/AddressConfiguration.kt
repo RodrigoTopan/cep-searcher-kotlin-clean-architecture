@@ -1,6 +1,6 @@
 package com.clean.architecture.cleancepsearcherapi.infraestructure.configuration
 
-import com.clean.architecture.cleancepsearcherapi.adapters.gateways.repositories.AddressRepository
+import com.clean.architecture.cleancepsearcherapi.core.ports.AddressRepository
 import com.clean.architecture.cleancepsearcherapi.core.address.usecases.impl.CreationAddressUseCaseImpl
 import com.clean.architecture.cleancepsearcherapi.core.address.usecases.impl.SearchAddressUseCaseImpl
 import com.clean.architecture.cleancepsearcherapi.infraestructure.adapters.gateways.SearchAddressGatewayImpl

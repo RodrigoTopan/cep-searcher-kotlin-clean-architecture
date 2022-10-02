@@ -10,6 +10,7 @@ data class AddressTableModel(
     @Column(name = "id", unique = true, nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null,
+    val uuid: String,
     val cep: String,
     val street: String,
     val district: String,

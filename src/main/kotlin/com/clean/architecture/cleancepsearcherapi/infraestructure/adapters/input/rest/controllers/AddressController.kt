@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
+import java.util.UUID
 
 @Slf4j
 @RestController
@@ -55,7 +56,7 @@ final class AddressController(
     @PostMapping
     fun create(@RequestBody creationAddressRequestDTO: CreationAddressRequestDTO): ResponseEntity<String> {
         val (cep, street, district, city, state) = creationAddressRequestDTO;
-        val addressEntity = AddressEntity(null, cep, street, district, city, state);
+        val addressEntity = AddressEntity(UUID.randomUUID().toString(), cep, street, district, city, state);
         creationAddressUseCase.run(addressEntity);
         return ResponseEntity
             .status(HttpStatus.CREATED)

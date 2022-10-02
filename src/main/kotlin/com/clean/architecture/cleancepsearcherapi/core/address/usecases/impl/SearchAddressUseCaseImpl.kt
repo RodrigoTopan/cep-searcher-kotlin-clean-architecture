@@ -1,6 +1,6 @@
 package com.clean.architecture.cleancepsearcherapi.core.address.usecases.impl
 
-import com.clean.architecture.cleancepsearcherapi.adapters.gateways.repositories.AddressRepository
+import com.clean.architecture.cleancepsearcherapi.core.ports.AddressRepository
 import com.clean.architecture.cleancepsearcherapi.core.address.exceptions.AddressNotFoundException
 import com.clean.architecture.cleancepsearcherapi.core.address.usecases.SearchAddressUseCase
 import com.clean.architecture.cleancepsearcherapi.core.ports.SearchAddressGateway
@@ -20,7 +20,7 @@ class SearchAddressUseCaseImpl(
         return addressEntity;
     }
 
-    override fun searchById(id: String): AddressEntity {
-        return addressRepository.findById(id) ?: throw AddressNotFoundException("address not found");
+    override fun searchById(uuid: String): AddressEntity {
+        return addressRepository.findByUUID(uuid) ?: throw AddressNotFoundException("address not found");
     }
 }
