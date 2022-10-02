@@ -1,4 +1,4 @@
-package com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.sql.models
+package com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.mongodb.models
 
 import com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.Model
 import org.springframework.data.annotation.Id

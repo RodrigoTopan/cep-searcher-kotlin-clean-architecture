@@ -3,7 +3,7 @@ package com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.m
 import com.clean.architecture.cleancepsearcherapi.adapters.gateways.repositories.AddressRepository
 import com.clean.architecture.cleancepsearcherapi.domain.entities.AddressEntity
 import com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.Mapper
-import com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.sql.models.AddressDocumentModel
+import com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.mongodb.models.AddressDocumentModel
 import org.springframework.stereotype.Repository
 import java.util.Objects.isNull
 

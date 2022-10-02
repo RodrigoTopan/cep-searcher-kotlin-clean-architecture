@@ -1,8 +1,8 @@
-package com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.sql.mappers
+package com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.mongodb.mappers
 
 import com.clean.architecture.cleancepsearcherapi.domain.entities.AddressEntity
 import com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.Mapper
-import com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.sql.models.AddressDocumentModel
+import com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.mongodb.models.AddressDocumentModel
 import org.springframework.stereotype.Component
 
 @Component
