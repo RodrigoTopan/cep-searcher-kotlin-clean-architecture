@@ -11,7 +11,7 @@ The application is separated into three layers: Domain, UseCases and Adapters
    The center of the ring, the domain layer, houses the overarching business rules, logic and needs that form the foundation for the application's intended role and purpose. This core also contains what are known as "entities," which represent the class and interface types needed by the enterprise business rules. These types encapsulate the most general and high-level rules that the application would take advantage of. These types do not have any knowledge of the other layers nor do they have any dependency on any other types of components residing in the outer layers.
 </p>
 <p>
-2. <b> The application layer</b><br>
+2. <b> The application layer or Core Layer</b><br>
    The application layer, which sits outside of this core, contains the rules and logic that relate specifically to the application's design and behavior. This layer includes "use cases" which refer to the specific business rules that define the application's responsibilities and expected behavior. It is isolated from external elements, such as the user interface, database and frameworks, to maintain the intended separation of concerns.
 </p>
 <p>
@@ -25,6 +25,6 @@ The application is separated into three layers: Domain, UseCases and Adapters
 
 ##### Technologies:
 
-Kotlin, Spring, Hibernate
+Kotlin, Spring, Hibernate, MongoDB, Docker, Docker-Compose
 
 ![image](https://cdn.ttgtmedia.com/rms/onlineImages/app_arch-layers_clean_architecture-f.png)
