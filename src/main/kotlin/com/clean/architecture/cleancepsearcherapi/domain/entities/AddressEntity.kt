@@ -9,4 +9,4 @@ data class AddressEntity(
     val district: String,
     val city: String,
     val state: String
-): Entity;
+) : Entity;

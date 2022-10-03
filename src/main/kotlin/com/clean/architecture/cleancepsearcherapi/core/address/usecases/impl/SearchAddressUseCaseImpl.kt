@@ -1,8 +1,8 @@
 package com.clean.architecture.cleancepsearcherapi.core.address.usecases.impl
 
-import com.clean.architecture.cleancepsearcherapi.core.ports.AddressRepository
 import com.clean.architecture.cleancepsearcherapi.core.address.exceptions.AddressNotFoundException
 import com.clean.architecture.cleancepsearcherapi.core.address.usecases.SearchAddressUseCase
+import com.clean.architecture.cleancepsearcherapi.core.ports.AddressRepository
 import com.clean.architecture.cleancepsearcherapi.core.ports.SearchAddressGateway
 import com.clean.architecture.cleancepsearcherapi.domain.entities.AddressEntity
 

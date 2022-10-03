@@ -4,11 +4,11 @@ import com.clean.architecture.cleancepsearcherapi.core.ports.AddressRepository
 import com.clean.architecture.cleancepsearcherapi.domain.entities.AddressEntity
 import com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.Mapper
 import com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.sql.models.AddressTableModel
-import org.springframework.context.annotation.Primary
+import org.springframework.context.annotation.Profile
 import org.springframework.stereotype.Repository
 import java.util.Objects.isNull
 
-@Primary
+@Profile("sql")
 @Repository
 internal class SqlAddressRepositoryImpl(
     private val sqlAddressBaseRepository: SqlAddressBaseRepository,

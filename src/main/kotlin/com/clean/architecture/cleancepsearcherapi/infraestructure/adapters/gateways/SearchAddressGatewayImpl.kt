@@ -1,11 +1,11 @@
 package com.clean.architecture.cleancepsearcherapi.infraestructure.adapters.gateways
 
-import com.clean.architecture.cleancepsearcherapi.infraestructure.adapters.gateways.dto.ViaCepAddressResponseDTO
-import com.clean.architecture.cleancepsearcherapi.infraestructure.adapters.gateways.feign.ViaCepClient
 import com.clean.architecture.cleancepsearcherapi.core.ports.SearchAddressGateway
 import com.clean.architecture.cleancepsearcherapi.domain.entities.AddressEntity
+import com.clean.architecture.cleancepsearcherapi.infraestructure.adapters.gateways.dto.ViaCepAddressResponseDTO
+import com.clean.architecture.cleancepsearcherapi.infraestructure.adapters.gateways.feign.ViaCepClient
 import org.springframework.stereotype.Service
-import java.util.UUID
+import java.util.*
 
 @Service
 class SearchAddressGatewayImpl(private val viaCepClient: ViaCepClient) : SearchAddressGateway {

@@ -3,8 +3,10 @@ package com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.m
 import com.clean.architecture.cleancepsearcherapi.domain.entities.AddressEntity
 import com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.Mapper
 import com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.mongodb.models.AddressDocumentModel
+import org.springframework.context.annotation.Profile
 import org.springframework.stereotype.Component
 
+@Profile("mongodb")
 @Component
 class MongoAddressMapperImpl : Mapper<AddressEntity, AddressDocumentModel> {
     override fun toEntity(model: AddressDocumentModel): AddressEntity {

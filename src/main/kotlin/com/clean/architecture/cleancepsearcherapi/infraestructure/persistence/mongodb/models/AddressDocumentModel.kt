@@ -1,9 +1,10 @@
 package com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.mongodb.models
 
 import com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.Model
+import org.springframework.context.annotation.Profile
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
-
+@Profile("mongodb")
 @Document
 data class AddressDocumentModel(
     @Id var id: String? = null,
@@ -13,4 +14,4 @@ data class AddressDocumentModel(
     val district: String,
     val city: String,
     val state: String
-): Model
+) : Model
