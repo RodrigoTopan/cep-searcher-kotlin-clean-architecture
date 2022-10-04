@@ -1,20 +1,20 @@
+# DESCOMENTAR CASO QUEIRA SE CONECTAR COM REPOSITÓRIOS SQL (H2)
+#spring:
+#  profiles:
+#   active: sql
+#  autoconfigure:
+#    exclude: org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration, org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration
+
+# COMENTAR CASO QUEIRA SE CONECTAR COM SQL REPOSITORIES AO INVÉS DO MONGO
+spring:
+  profiles:
+    active: mongodb
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/test
+      auto-index-creation: true
+
 viacep:
   api:
     url: https://viacep.com.br/ws/
     responseFormat: /json
-
-# DESCOMENTAR CASO QUEIRA SE CONECTAR COM REPOSITÓRIOS SQL (H2)
-spring:
-  profiles:
-   active: sql
-  autoconfigure:
-    exclude: org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration, org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration
-
-# COMENTAR CASO QUEIRA SE CONECTAR COM SQL REPOSITORIES AO INVÉS DO MONGO
-#spring:
-#  profiles:
-#    active: mongodb
-#  data:
-#    mongodb:
-#      uri: mongodb://localhost:27017/test
-#      auto-index-creation: true

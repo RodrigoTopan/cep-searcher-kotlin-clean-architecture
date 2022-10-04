@@ -27,6 +27,8 @@ Kotlin, Spring, H2 Database, MongoDB
 
 ### Referências
 * [Artigo: A primer on the clean architecture pattern and its principles](https://www.techtarget.com/searchapparchitecture/tip/A-primer-on-the-clean-architecture-pattern-and-its-principles)
+* [Artigo: Baeldung Hexagonal Architecture DDD Spring](https://www.baeldung.com/hexagonal-architecture-ddd-spring)
 * [Video: Otavio Lemos - Clean Architecture com TypeScript & Node.js](https://www.youtube.com/watch?v=7BNoxRntLYo)
 * [Artigo: Clean Architecture Example with Java and Spring Boot](https://medium.com/swlh/clean-architecture-java-spring-fea51e26e00)
 * [Principal projeto Java Spring usado de referência no Github](https://github.com/soyjuanmalopez/clean-architecture)
+* [Principal projeto Kotlin Spring usado de referência no Github](https://github.com/ESchouten/CleanArchitecture)

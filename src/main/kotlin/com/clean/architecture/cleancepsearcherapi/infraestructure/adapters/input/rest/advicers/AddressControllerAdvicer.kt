@@ -11,7 +11,7 @@ class AddressControllerAdvicer {
     data class JsonResponse(val message: String?)
 
     @ExceptionHandler(value = [AddressNotFoundException::class])
-    fun handleAddressNotFoundException(e: AddressNotFoundException): ResponseEntity<JsonResponse?>? {
+    fun handleAddressNotFoundException(e: AddressNotFoundException): ResponseEntity<JsonResponse> {
         return ResponseEntity(JsonResponse(e.message), HttpStatus.NOT_FOUND)
     }
 }

@@ -1,3 +1,7 @@
 package com.clean.architecture.cleancepsearcherapi.domain
 
-interface Entity {}
+import java.util.UUID
+
+interface Entity {
+    val uuid: UUID
+}

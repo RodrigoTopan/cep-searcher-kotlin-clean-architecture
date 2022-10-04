@@ -1,6 +1,7 @@
 package com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.sql.models
 
 import com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.Model
+import java.util.*
 import javax.persistence.*
 
 @Entity
@@ -10,10 +11,10 @@ data class AddressTableModel(
     @Column(name = "id", unique = true, nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null,
-    val uuid: String,
+    val uuid: UUID,
     val cep: String,
     val street: String,
     val district: String,
     val city: String,
     val state: String
-): Model
+) : Model
