@@ -1,6 +1,6 @@
 package com.clean.architecture.cleancepsearcherapi.infraestructure.configuration
 
-import com.clean.architecture.cleancepsearcherapi.core.address.usecases.impl.CreationAddressUseCaseImpl
+import com.clean.architecture.cleancepsearcherapi.core.address.usecases.impl.CreateAddressUseCaseImpl
 import com.clean.architecture.cleancepsearcherapi.core.address.usecases.impl.SearchAddressUseCaseImpl
 import com.clean.architecture.cleancepsearcherapi.core.ports.AddressRepository
 import com.clean.architecture.cleancepsearcherapi.domain.entities.AddressEntity
@@ -36,8 +36,8 @@ class SqlAddressConfiguration {
     }
 
     @Bean
-    fun creationAddressUseCase(): CreationAddressUseCaseImpl {
-        return CreationAddressUseCaseImpl(addressRepository()!!)
+    fun creationAddressUseCase(): CreateAddressUseCaseImpl {
+        return CreateAddressUseCaseImpl(addressRepository()!!)
     }
 
     @Bean

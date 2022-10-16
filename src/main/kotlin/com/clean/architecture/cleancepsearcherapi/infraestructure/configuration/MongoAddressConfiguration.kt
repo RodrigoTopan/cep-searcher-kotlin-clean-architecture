@@ -1,6 +1,6 @@
 package com.clean.architecture.cleancepsearcherapi.infraestructure.configuration
 
-import com.clean.architecture.cleancepsearcherapi.core.address.usecases.impl.CreationAddressUseCaseImpl
+import com.clean.architecture.cleancepsearcherapi.core.address.usecases.impl.CreateAddressUseCaseImpl
 import com.clean.architecture.cleancepsearcherapi.core.address.usecases.impl.SearchAddressUseCaseImpl
 import com.clean.architecture.cleancepsearcherapi.core.ports.AddressRepository
 import com.clean.architecture.cleancepsearcherapi.domain.entities.AddressEntity
@@ -10,10 +10,6 @@ import com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.mo
 import com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.mongodb.models.AddressDocumentModel
 import com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.mongodb.repositories.address.MongoAddressBaseRepository
 import com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.mongodb.repositories.address.MongoAddressRepositoryImpl
-import com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.sql.mappers.SqlAddressMapperImpl
-import com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.sql.models.AddressTableModel
-import com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.sql.repositories.address.SqlAddressBaseRepository
-import com.clean.architecture.cleancepsearcherapi.infraestructure.persistence.sql.repositories.address.SqlAddressRepositoryImpl
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -40,8 +36,8 @@ class MongoAddressConfiguration {
     }
 
     @Bean
-    fun creationAddressUseCase(): CreationAddressUseCaseImpl {
-        return CreationAddressUseCaseImpl(addressRepository()!!)
+    fun creationAddressUseCase(): CreateAddressUseCaseImpl {
+        return CreateAddressUseCaseImpl(addressRepository()!!)
     }
 
     @Bean
